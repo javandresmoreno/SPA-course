@@ -1,0 +1,14 @@
+{
+  "name": "coursespa",
+  "version": "1.0.0",
+  "description": "Single page application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Javier Moreno <javandresmoreno@gmail.com>",
+  "license": "MIT"
+}
