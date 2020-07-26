@@ -2,6 +2,7 @@
 const path = require("path");
 // plugin para trabajar con html
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   // el archivo inicial del proyecto
@@ -37,6 +38,14 @@ module.exports = {
       template: "./public/index.html",
       // donde lo vamos a guardar
       filename: "./index.html",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "./src/styles/styles.css",
+          to: "",
+        },
+      ],
     }),
   ],
 };
