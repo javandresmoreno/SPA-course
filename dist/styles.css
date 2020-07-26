@@ -19,9 +19,13 @@ body {
   color: #15302c;
 }
 
+.Header a img {
+  width: 250px;
+}
+
 .Main {
   padding: 10px;
-  grid-template-columns: minmax(auto, 976px);
+  grid-template-columns: minmax(auto, 1200px);
   display: grid;
   justify-content: center;
 }
@@ -31,6 +35,31 @@ body {
   grid-gap: 1.5rem;
   grid-row-gap: 1.5em;
   display: grid;
+}
+
+.Character-item {
+  display: grid;
+  place-content: center;
+  box-shadow: 8px 14px 6px rgba(39, 44, 49, 0.06);
+  border-radius: 5px;
+}
+
+.Character-item:hover {
+  box-shadow: 8px 14px 6px rgba(39, 44, 49, 0.15);
+}
+
+.Character-item a:hover {
+  color: #536066;
+}
+
+.Character-item a {
+  color: #212121;
+  text-decoration: none;
+  text-align: center;
+}
+
+.Character-item img {
+  border-radius: 10px;
 }
 
 .Characters-inner {
@@ -124,5 +153,20 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .Characters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Characters-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Characters {
+    grid-template-columns: 1fr;
   }
 }
